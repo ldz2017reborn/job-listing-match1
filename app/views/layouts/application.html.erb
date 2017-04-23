@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Job Listing </title>
+        <title>Ruby 之家 </title>
         <%= csrf_meta_tags %>
 
         <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -17,7 +17,9 @@
             <%= yield %>
         </div>
 
-        <%= render "common/footer" %>
+        <div class="row">
+          <%= render "common/navbar" %>
+        </div>
 
     </body>
 </html>
