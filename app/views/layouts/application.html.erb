@@ -7,7 +7,7 @@
 
         <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
         <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-        <link rel="shortcut icon" href="https://ooo.0o0.ooo/2017/04/27/5901f4baca734.png">
+        <link rel="shortcut icon" href="https://ooo.0o0.ooo/2017/04/28/590326a068a2a.png">
     </head>
 
     <body>
@@ -15,12 +15,10 @@
         <div class="container-fluid">
           <div class="row">
             <%= render "common/navbar" %>
-            <%= render "common/flashes" %>
+            <%= render "common/flashes" %>            
             <%= yield %>
+            <%= render "common/footer" %>
          </div>
         </div>
-
-            <%= render "common/navbar" %>
-
     </body>
 </html>

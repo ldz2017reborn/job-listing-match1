@@ -318,19 +318,21 @@
 }
 
 .section-heading-spacer {
-    float: left;
+    float: center;
     width: 200px;
     border-top: 3px solid #e7e7e7;
 }
 
 .section-heading {
     margin-bottom: 30px;
+    text-align: center;
 }
 
 .lead {
     font-size: 18px;
     font-weight: 400;
     color: #222;  //字体颜色
+    text-align: center;
 }
 
 
@@ -376,6 +378,18 @@ a {
   display: flex;
   flex-flow: row wrap;
 }
+
+//---------------footer上方图片--------------
+.container-fluid {
+   margin: 20px 10px 10px 10px;
+   border-radius: 0;//圆角为0
+   text-align: center;//文字居中
+ }
+
+
+
+
+
 //This main is mostly to push the footer to the bottom and for demo purposes.
 main {
   flex: 1 1 auto; //For IE11
