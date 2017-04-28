@@ -1,8 +1,8 @@
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-default" navbar-fixed-top role="navigation">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <a class="navbar-brand" href="/"><i class="fa fa-diamond" aria-hidden="true">Ruby 之家</i></a> Listing </a>
+            <a class="navbar-brand" href="/"><i class="fa fa-home " aria-hidden="true">  Ruby 之家</i></a> Listing </a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -49,6 +49,22 @@
     </div>
   </div>
 </div>
+
+
+<div class="nav navbar-nav navbar-left">
+  <%= form_tag search_jobs_path , :method => :get do %>
+      <div class="input-group" id="search-id" >
+        <input type="text" class="form-control" name="q" value="<%= params[:q] %>" placeholder="请输入职位信息">
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+        </div>
+
+      </div>
+      <% end %>
+    </div>
+
 
 <div class="modal fade" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
   <div class="modal-dialog">
