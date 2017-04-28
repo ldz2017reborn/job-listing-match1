@@ -155,6 +155,25 @@
       z-index: 1030;
     }
 
+    .col-centered{
+       float: none;
+       margin: 0 auto;
+    }
+
+    .form-control,
+    {
+        padding:10px 10px;
+    }
+    .input-group {
+        position: relative;
+        display: table;
+        border-collapse: separate;
+        width: 200px; //加上width
+        margin-left: 720px;
+        padding: 10px 10px;
+        margin-top: -67px;
+    }
+
 
     .container-fluid .jumbotron{
        padding-bottom: 210px;//内部的底部边距，这样按钮不会很靠近底部了
@@ -285,24 +304,6 @@
          font-size: 12px;
        }
 
-//--------------------Common----------------
-.col-centered{
-   float: none;
-   margin: 0 auto;
-}
-
-.form-group,
-{
-    padding-top: -20px;
-}
-.input-group {
-    position: relative;
-    display: table;
-    border-collapse: separate;
-    width: 200px; //加上width
-    margin-left: 450px;
-    margin-top: -43px;
-}
 
 //----------------Content--------------------
 .content-1 {
