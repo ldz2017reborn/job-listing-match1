@@ -19,6 +19,16 @@
  @import "bootstrap";
  @import "font-awesome";
 
+ html {
+   position: relative;
+   min-height: 100%;
+ }
+
+ body {
+   /* Margin bottom by footer height */
+   margin-bottom: 100px;
+ }
+
  .jumbotron {
    background-image:url('header');
    background-repeat: no-repeat;
@@ -69,7 +79,7 @@
    text-align: center;
    color: white;
  }
-
+//------------------表格的CSS-----------
  .custab{
    border: 1px solid #ccc;
 
@@ -107,7 +117,8 @@
      line-height: 30px; //文字行高
    }
 
-   .navbar-default .navbar-brand:hover,
+   .navbar-default .navbar-brand:hover{
+     color: green;} //鼠标放置在链接上的文字颜色
    .navbar-default .navbar-brand:focus {
      color: #FF6F00; //鼠标放置在链接上的文字颜色
 
@@ -119,7 +130,8 @@
 
     }
 
-    .navbar-default .navbar-nav > li > a:hover,
+    .navbar-default .navbar-nav > li > a:hover {color: green}
+
     .navbar-default .navbar-nav > li > a:focus {
       color: #FF6F00;
 
@@ -165,11 +177,11 @@
         padding:10px 10px;
     }
     .input-group {
-        position: relative;
+        position: 0;
         display: table;
         border-collapse: separate;
         width: 200px; //加上width
-        margin-left: 720px;
+        margin-right: 200px;
         padding: 10px 10px;
         margin-top: -67px;
     }
@@ -380,187 +392,300 @@ a {
   flex-flow: row wrap;
 }
 
-//---------------footer上方图片--------------
+
 .container-fluid {
+   margin: 20px 10px 10px 10px;
+   border-radius: 0;//圆角为0
+   text-align: left;//文字居中
+ }
+//---------------footer上方图片--------------
+.container-fluid-1 {
    margin: 20px 10px 10px 10px;
    border-radius: 0;//圆角为0
    text-align: center;//文字居中
  }
 
+//--------------footer定位-----------------
 
 
+   .content { flex: 1;}
+html { height: 150%;}
+ // body { min-height: 100%; display: flex; flex-direction: column;}
 
 
 //This main is mostly to push the footer to the bottom and for demo purposes.
-main {
-  flex: 1 1 auto; //For IE11
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font: 10em "Oswald", sans-serif;
-  color: rgb(155,155,155);
-  line-height: 1
-}
-footer {
-  background: rgb(55,55,55);
-  margin-top: auto;
-  width: 100%
-}
-.footer-list-top {
-  width: 33.333%
-}
-.footer-list-top > li {
-  text-align: center;
-  padding-bottom: 10px
-}
-.footer-list-header {
-  padding: 10px 0 5px 0;
-  color: #fff;
-  font: 2.3vw "Oswald", sans-serif
-}
-.footer-list-anchor {
-  font: 1.3em "Open Sans", sans-serif
-}
-.footer-social-section {
-  width: 100%;
-  align-items: center;
-  justify-content: space-around;
-  position: relative;
-  margin-top: 5px;
-}
-.footer-social-section::after {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  left: 10px;
-  border-top: 1px solid $primary-line-color;
-  width: calc(100% - 20px)
-}
-.footer-social-overlap {
-  position: relative;
-  z-index: 2;
-  background: rgb(55,55,55);
-  padding: 0 20px
-}
-.footer-social-connect {
-  display: flex;
-  align-items: center;
-  font: 3.5em "Oswald", sans-serif;
-  color: #fff
-}
-.footer-social-small {
-  font-size: 0.6em;
-  padding: 0px 20px
-}
-.footer-social-overlap > a {
-  font-size: 3em
-}
-.footer-social-overlap > a:not(:first-child) {
-  margin-left: 0.38em
-}
-.footer-bottom-section {
-  width: 100%;
-  padding: 10px;
-  border-top: 1px solid $primary-line-color;
-  margin-top: 10px
-}
-.footer-bottom-section > div:first-child {
-  margin-right: auto
-}
-.footer-bottom-wrapper {
-  font-size: 1.5em;
-  color: #fff
-}
-.footer-address {
-  display: inline;
-  font-style: normal
-}
-@media only screen and (max-width: 768px) {
-  .footer-list-header {
-    font-size: 2em
-  }
-  .footer-list-anchor {
-    font-size: 1.1em
-  }
-  .footer-social-connect {
-    font-size: 2.5em
-  }
-  .footer-social-overlap > a {
-    font-size: 2.24em
-  }
-  .footer-bottom-wrapper {
-    font-size: 1.3em
-  }
-}
-@media only screen and (max-width: 568px) {
-  main {
-    font-size: 5em
-  }
-  .footer-list-top {
-    width: 100%
-  }
-  .footer-list-header {
-    font-size: 3em;
-  }
-  .footer-list-anchor {
-    font-size: 1.5em
-  }
-  .footer-social-section {
-    justify-content: center
-  }
-  .footer-social-section::after {
-    top: 25%
-  }
-  .footer-social-connect {
-    margin-bottom: 10px;
-    padding: 0 10px
-  }
-  .footer-social-overlap {
-    display: flex;
-    justify-content: center;
-  }
-  .footer-social-icons-wrapper {
-    width: 100%;
-    padding: 0
-  }
-  .footer-social-overlap > a:not(:first-child) {
-    margin-left: 20px;
-  }
-  .footer-bottom-section {
-    padding: 0 5px 10px 5px
-  }
-  .footer-bottom-wrapper {
+// main {
+//   flex: 1 1 auto; //For IE11
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   font: 10em "Oswald", sans-serif;
+//   color: rgb(155,155,155);
+//   line-height: 1
+// }
+// footer {
+//   background: rgb(55,55,55);
+//   margin-top: auto;
+//   width: 100%
+// }
+// .footer-list-top {
+//   width: 33.333%
+// }
+// .footer-list-top > li {
+//   text-align: center;
+//   padding-bottom: 10px
+// }
+// .footer-list-header {
+//   padding: 10px 0 5px 0;
+//   color: #fff;
+//   font: 2.3vw "Oswald", sans-serif
+// }
+// .footer-list-anchor {
+//   font: 1.3em "Open Sans", sans-serif
+// }
+// .footer-social-section {
+//   width: 100%;
+//   align-items: center;
+//   justify-content: space-around;
+//   position: relative;
+//   margin-top: 5px;
+// }
+// .footer-social-section::after {
+//   content: "";
+//   position: absolute;
+//   z-index: 1;
+//   top: 50%;
+//   left: 10px;
+//   border-top: 1px solid $primary-line-color;
+//   width: calc(100% - 20px)
+// }
+// .footer-social-overlap {
+//   position: relative;
+//   z-index: 2;
+//   background: rgb(55,55,55);
+//   padding: 0 20px
+// }
+// .footer-social-connect {
+//   display: flex;
+//   align-items: center;
+//   font: 3.5em "Oswald", sans-serif;
+//   color: #fff
+// }
+// .footer-social-small {
+//   font-size: 0.6em;
+//   padding: 0px 20px
+// }
+// .footer-social-overlap > a {
+//   font-size: 3em
+// }
+// .footer-social-overlap > a:not(:first-child) {
+//   margin-left: 0.38em
+// }
+// .footer-bottom-section {
+//   width: 100%;
+//   padding: 10px;
+//   border-top: 1px solid $primary-line-color;
+//   margin-top: 10px
+// }
+// .footer-bottom-section > div:first-child {
+//   margin-right: auto
+// }
+// .footer-bottom-wrapper {
+//   font-size: 1.5em;
+//   color: #fff
+// }
+// .footer-address {
+//   display: inline;
+//   font-style: normal
+// }
+// @media only screen and (max-width: 768px) {
+//   .footer-list-header {
+//     font-size: 2em
+//   }
+//   .footer-list-anchor {
+//     font-size: 1.1em
+//   }
+//   .footer-social-connect {
+//     font-size: 2.5em
+//   }
+//   .footer-social-overlap > a {
+//     font-size: 2.24em
+//   }
+//   .footer-bottom-wrapper {
+//     font-size: 1.3em
+//   }
+// }
+// @media only screen and (max-width: 568px) {
+//   main {
+//     font-size: 5em
+//   }
+//   .footer-list-top {
+//     width: 100%
+//   }
+//   .footer-list-header {
+//     font-size: 3em;
+//   }
+//   .footer-list-anchor {
+//     font-size: 1.5em
+//   }
+//   .footer-social-section {
+//     justify-content: center
+//   }
+//   .footer-social-section::after {
+//     top: 25%
+//   }
+//   .footer-social-connect {
+//     margin-bottom: 10px;
+//     padding: 0 10px
+//   }
+//   .footer-social-overlap {
+//     display: flex;
+//     justify-content: center;
+//   }
+//   .footer-social-icons-wrapper {
+//     width: 100%;
+//     padding: 0
+//   }
+//   .footer-social-overlap > a:not(:first-child) {
+//     margin-left: 20px;
+//   }
+//   .footer-bottom-section {
+//     padding: 0 5px 10px 5px
+//   }
+//   .footer-bottom-wrapper {
+//     text-align: center;
+//     width: 100%;
+//     margin-top: 10px
+//   }
+// }
+// @media only screen and (max-width: 480px) {
+//   .footer-social-overlap > a {
+//     margin: auto
+//   }
+//   .footer-social-overlap > a:not(:first-child) {
+//     margin-left: 0;
+//   }
+//   .footer-bottom-rights {
+//     display: block
+//   }
+// }
+// @media only screen and (max-width: 320px) {
+//   .footer-list-header {
+//     font-size: 2.2em
+//   }
+//   .footer-list-anchor {
+//     font-size: 1.2em
+//   }
+//   .footer-social-connect {
+//     font-size: 2.4em
+//   }
+//   .footer-social-overlap > a {
+//     font-size: 2.24em
+//   }
+//   .footer-bottom-wrapper {
+//     font-size: 1.3em
+//   }
+// }
+// .footer {
+//    position: absolute;
+//    bottom: 0;
+//    width: 100%;
+//    /* Set the fixed height of the footer here */
+//    height: 100px;
+//    background-color: #222222;
+//    margin: 0 -15px;
+//
+//    p {
+//       color: white;
+//      margin-top: 30px;
+//    }
+//   }
+
+/*===== footer ====*/
+.footer{
     text-align: center;
-    width: 100%;
-    margin-top: 10px
-  }
+    min-height: 250px;
+    background-color: #002E2E;
+    padding: 15px 0;
+    color: #fff;
+
+    h4{
+        font-size: 16px;
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
+
+    p{
+        font-size: 14px;
+    }
+
+    li{
+      margin-top: 5px;
+    }
+
+    a{
+      text-decoration:none;
+      color: #ccc;
+    }
+    a:hover,
+    a:active,
+    a:focus{
+      color: #4A6BB5;
+    }
+
+    img{
+      width: 35px;
+      margin: 5px;
+    }
+
+    img:hover{
+      opacity: 0.75;
+    }
+
+    p{
+      a{
+        color: #4A6BB5;
+      }
+      a:hover{
+        color: #35CCC6;
+      }
+    }
+
+    .footer-box{
+      text-align: left !important;
+      margin-top: 15px;
+    }
 }
-@media only screen and (max-width: 480px) {
-  .footer-social-overlap > a {
-    margin: auto
+
+.footer-content{
+  font-size: 16px;
+  font-family: Raleway;
+  color: #ddd;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  font-weight: 200;
+
+  img{
+    width: 25px;
+    margin-left: 7.5px;
+    margin-right: -0.1px;
   }
-  .footer-social-overlap > a:not(:first-child) {
-    margin-left: 0;
+  img:hover{
+    opacity: 1;
   }
-  .footer-bottom-rights {
-    display: block
-  }
+
 }
-@media only screen and (max-width: 320px) {
-  .footer-list-header {
-    font-size: 2.2em
+
+.goodjob{
+  float: right;
+  margin-top: -20px;
+  img{
+    width: 50px;
   }
-  .footer-list-anchor {
-    font-size: 1.2em
+  a:hover{
+    opacity: 0.45;
   }
-  .footer-social-connect {
-    font-size: 2.4em
-  }
-  .footer-social-overlap > a {
-    font-size: 2.24em
-  }
-  .footer-bottom-wrapper {
-    font-size: 1.3em
-  }
+
 }
+
+/*===== footer ====*/

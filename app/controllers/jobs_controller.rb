@@ -4,6 +4,7 @@ class JobsController < ApplicationController
 
   def show
     @job = Job.find(params[:id])
+
   end
 
   def index
@@ -15,6 +16,7 @@ class JobsController < ApplicationController
           else
             Job.published.recent
           end
+   @jobs = @jobs.paginate(:page => params[:page], :per_page => 5)
     end
 
     def new
@@ -78,9 +80,5 @@ class JobsController < ApplicationController
     def job_params
       params.require(:job).permit(:title, :description, :wage_upper_bound, :wage_lower_bound, :contact_email, :is_hidden, :location)
     end
-
-
-
-
 
 end

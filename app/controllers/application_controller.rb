@@ -8,4 +8,8 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def index
+    @application = Application.find(params[:id])
+    @jobs = @application.jobs.recent.paginate(:page => params[:page], :per_page => 5)
+  end
 end

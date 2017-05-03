@@ -16,11 +16,10 @@ Rails.application.routes.draw do
       end
     end
 
-    resources :jobs do
-    resources :resumes
-    collection do
+resources :jobs do
+ resources :resumes
+   collection do
       get :search
     end
-  end
-
+   end
 end
